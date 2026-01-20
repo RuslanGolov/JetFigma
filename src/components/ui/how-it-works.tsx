@@ -99,7 +99,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
   return (
     <section
       id="how-it-works"
-      className={cn("w-full bg-slate-50 py-16 sm:py-24", className)}
+      className={cn("w-full bg-white py-16 sm:py-24", className)}
       {...props}
     >
       <div className="container mx-auto px-4">
@@ -126,7 +126,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
               <div
                 key={index}
                 // Center the number within its grid column
-                className="flex h-8 w-8 items-center justify-center justify-self-center rounded-full bg-white font-semibold text-foreground ring-4 ring-slate-50"
+                className="flex h-8 w-8 items-center justify-center justify-self-center rounded-full bg-white font-semibold text-foreground ring-4 ring-white"
               >
                 {index + 1}
               </div>
