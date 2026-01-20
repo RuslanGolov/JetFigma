@@ -63,6 +63,36 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .bento-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .bento-item {
+    @apply relative overflow-hidden rounded-3xl border border-black/5 bg-slate-50 p-6 transition-all duration-300;
+  }
+
+  .bento-item::before {
+    content: "";
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300 pointer-events-none;
+    background: radial-gradient(
+      600px circle at var(--mouse-x) var(--mouse-y),
+      rgba(0, 0, 0, 0.08),
+      transparent 40%
+    );
+  }
+
+  .bento-item:hover::before {
+    @apply opacity-100;
+  }
 }
 
 @layer base {

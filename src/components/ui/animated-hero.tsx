@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { MoveRight, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import Image from "next/image";
 
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -76,6 +78,18 @@ function Hero() {
               Sign up here <MoveRight className="w-4 h-4" />
             </Button>
           </div>
+        </div>
+        <div className="flex flex-col overflow-hidden pb-20">
+          <ContainerScroll titleComponent={null}>
+            <Image
+              src={`https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop`}
+              alt="hero"
+              height={720}
+              width={1400}
+              className="mx-auto rounded-2xl object-cover h-full object-left-top"
+              draggable={false}
+            />
+          </ContainerScroll>
         </div>
       </div>
     </div>

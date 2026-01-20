@@ -1,11 +1,13 @@
 import { HeroDemo } from "@/components/ui/demo";
-import { HeroScrollDemo } from "@/components/ui/hero-scroll-demo";
+import { CyberneticBentoDemo } from "@/components/ui/cybernetic-bento-demo";
+import HowItWorksDemo from "@/components/ui/how-it-works-demo";
 
 export default function Home() {
   return (
     <main>
       <HeroDemo />
-      <HeroScrollDemo />
+      <CyberneticBentoDemo />
+      <HowItWorksDemo />
     </main>
   );
 }
