@@ -41,8 +41,8 @@ export const CyberneticBentoGrid = () => {
                 <div className="bento-grid">
                     <BentoItem className="col-span-1 md:col-span-2 row-span-2 flex flex-col justify-between">
                         <div>
-                            <h2 className="text-2xl font-bold text-black">Real-time Analytics</h2>
-                            <p className="mt-2 text-gray-600">Monitor your application's performance with up-to-the-second data streams and visualizations.</p>
+                            <h2 className="text-2xl font-bold text-black">Native to Your JetBrains IDE</h2>
+                            <p className="mt-2 text-gray-600">Seamlessly integrated with IntelliJ IDEA, WebStorm, PyCharm, Android Studio, and the JetBrains ecosystem—no extra tools, no context switching.</p>
                         </div>
                         <div className="mt-4 h-48 bg-neutral-100 rounded-lg flex items-center justify-center text-gray-400 border border-black/5">
                             Chart Placeholder

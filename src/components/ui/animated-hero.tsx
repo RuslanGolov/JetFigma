@@ -10,7 +10,48 @@ import Image from "next/image";
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(
-    () => ["React", "Vue.js", "Angular", "Flutter", "React Native", "SwiftUI", "Electron", "Tauri", "Qt", "Svelte / SvelteKit"],
+    () => [
+      {
+        text: "React",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      },
+      {
+        text: "Vue.js",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
+      },
+      {
+        text: "Angular",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg",
+      },
+      {
+        text: "Flutter",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
+      },
+      {
+        text: "React Native",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      },
+      {
+        text: "SwiftUI",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg",
+      },
+      {
+        text: "Electron",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg",
+      },
+      {
+        text: "Tauri",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-original.svg",
+      },
+      {
+        text: "Qt",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/qt/qt-original.svg",
+      },
+      {
+        text: "Svelte / SvelteKit",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg",
+      },
+    ],
     []
   );
 
@@ -54,7 +95,7 @@ function Hero() {
                 {titles.map((title, index) => (
                   <motion.span
                     key={index}
-                    className="absolute font-semibold"
+                    className="absolute font-semibold flex items-center gap-4"
                     initial={{ opacity: 0, y: "-100" }}
                     transition={{ type: "spring", stiffness: 50 }}
                     animate={
@@ -69,7 +110,14 @@ function Hero() {
                           }
                     }
                   >
-                    {title}
+                    <Image
+                      src={title.url}
+                      alt={title.text}
+                      width={48}
+                      height={48}
+                      className="w-8 h-8 md:w-12 md:h-12"
+                    />
+                    {title.text}
                   </motion.span>
                 ))}
               </span>
