@@ -35,9 +35,9 @@ const BentoItem = ({ className, children }: { className?: string, children: Reac
 // Main Component
 export const CyberneticBentoGrid = () => {
     return (
-        <div className="main-container py-20 bg-slate-50">
+        <div id="key-features" className="main-container py-20 bg-slate-50">
             <div className="w-full max-w-6xl z-10 mx-auto px-4">
-                <h1 className="text-4xl sm:text-5xl font-bold text-black text-center mb-12">Core Features</h1>
+                <h1 className="text-4xl sm:text-5xl font-bold text-black text-center mb-12">Key Features</h1>
                 <div className="bento-grid">
                     <BentoItem className="col-span-1 md:col-span-2 row-span-2 flex flex-col justify-between">
                         <div>

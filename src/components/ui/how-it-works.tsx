@@ -1,8 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Layers, Search, Zap } from "lucide-react";
+import { Layers, MoveRight, Search, Zap } from "lucide-react";
 import type React from "react";
+import { Button } from "@/components/ui/button";
 
 // The main props for the HowItWorks component
 interface HowItWorksProps extends React.HTMLAttributes<HTMLElement> {}
@@ -145,6 +146,13 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
               benefits={step.benefits}
             />
           ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 flex justify-center">
+          <Button size="lg" className="gap-4">
+            Sign up for the Alpha <MoveRight className="w-4 h-4" />
+          </Button>
         </div>
       </div>
     </section>
