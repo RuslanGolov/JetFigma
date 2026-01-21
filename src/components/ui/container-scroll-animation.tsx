@@ -27,11 +27,12 @@ export const ContainerScroll = ({
   }, []);
 
   const scaleDimensions = () => {
-    return isMobile ? [0.7, 0.9] : [1.05, 1];
+    return isMobile ? [0.6, 1] : [1.05, 1];
   };
 
   const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions());
+  const innerScale = useTransform(scrollYProgress, [0, 1], isMobile ? [0.8, 1] : [1, 1]);
   const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
@@ -46,7 +47,7 @@ export const ContainerScroll = ({
         }}
       >
         <Header translate={translate} titleComponent={titleComponent} />
-        <Card rotate={rotate} translate={translate} scale={scale}>
+        <Card rotate={rotate} translate={translate} scale={scale} innerScale={innerScale}>
           {children}
         </Card>
       </div>
@@ -70,10 +71,12 @@ export const Header = ({ translate, titleComponent }: any) => {
 export const Card = ({
   rotate,
   scale,
+  innerScale,
   children,
 }: {
   rotate: MotionValue<number>;
   scale: MotionValue<number>;
+  innerScale: MotionValue<number>;
   translate: MotionValue<number>;
   children: React.ReactNode;
 }) => {
@@ -85,9 +88,12 @@ export const Card = ({
       }}
       className="max-w-5xl mt-0 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px]"
     >
-      <div className=" h-full w-full  overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-4 ">
+      <motion.div 
+        style={{ scale: innerScale }}
+        className=" h-full w-full overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-4 flex items-center justify-center md:block"
+      >
         {children}
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
