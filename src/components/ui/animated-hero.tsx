@@ -78,16 +78,6 @@ function Hero() {
     <div className="w-full">
       <div className="container mx-auto">
         <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
-          <div>
-            <Button
-              variant="secondary"
-              size="sm"
-              className="gap-4"
-              onClick={scrollToFeatures}
-            >
-              Read our Key Features <MoveRight className="w-4 h-4" />
-            </Button>
-          </div>
           <div className="flex gap-4 flex-col text-black">
             <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
               <span>Convert your Figma design to</span>
