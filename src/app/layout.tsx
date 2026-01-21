@@ -27,6 +27,20 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "v53551u706");
           `}
         </Script>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-SJC7N5YBRX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-SJC7N5YBRX');
+          `}
+        </Script>
       </head>
       <body className={inter.className}>{children}</body>
     </html>
