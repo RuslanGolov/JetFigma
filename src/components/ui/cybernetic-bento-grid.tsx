@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 // Reusable BentoItem component
 const BentoItem = ({ className, children }: { className?: string, children: React.ReactNode }) => {
@@ -44,13 +45,51 @@ export const CyberneticBentoGrid = () => {
                             <h2 className="text-2xl font-bold text-black">Native to Your JetBrains IDE</h2>
                             <p className="mt-2 text-gray-600">Seamlessly integrated with IntelliJ IDEA, WebStorm, PyCharm, Android Studio, and the JetBrains ecosystem—no extra tools, no context switching.</p>
                         </div>
-                        <div className="mt-4 h-48 bg-neutral-100 rounded-lg flex items-center justify-center text-gray-400 border border-black/5">
-                            Chart Placeholder
+                        <div className="mt-4 h-48 bg-neutral-100 rounded-lg flex items-center justify-center border border-black/5 overflow-hidden">
+                            <div className="grid grid-cols-4 gap-4 md:gap-8 items-center">
+                                <Image 
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" 
+                                    alt="IntelliJ IDEA" 
+                                    width={80} 
+                                    height={80} 
+                                    className="w-16 h-16 md:w-20 md:h-20"
+                                />
+                                <Image 
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webstorm/webstorm-original.svg" 
+                                    alt="WebStorm" 
+                                    width={80} 
+                                    height={80} 
+                                    className="w-16 h-16 md:w-20 md:h-20"
+                                />
+                                <Image 
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" 
+                                    alt="PyCharm" 
+                                    width={80} 
+                                    height={80} 
+                                    className="w-16 h-16 md:w-20 md:h-20"
+                                />
+                                <Image 
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" 
+                                    alt="Android Studio" 
+                                    width={80} 
+                                    height={80} 
+                                    className="w-16 h-16 md:w-20 md:h-20"
+                                />
+                            </div>
                         </div>
                     </BentoItem>
                     <BentoItem>
-                        <h2 className="text-xl font-bold text-black">Global CDN</h2>
-                        <p className="mt-2 text-gray-600 text-sm">Deliver content at lightning speed, no matter where your users are.</p>
+                        <div className="flex items-center gap-2">
+                            <Image 
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                                alt="VS Code"
+                                width={24}
+                                height={24}
+                                className="w-6 h-6"
+                            />
+                            <h2 className="text-xl font-bold text-black">VS Code supported</h2>
+                        </div>
+                        <p className="mt-2 text-gray-600 text-sm">Project-aware UI generation, now available inside Visual Studio Code.</p>
                     </BentoItem>
                     <BentoItem>
                         <h2 className="text-xl font-bold text-black">Secure Auth</h2>

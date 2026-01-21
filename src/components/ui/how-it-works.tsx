@@ -1,19 +1,21 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { Layers, MoveRight, Search, Zap } from "lucide-react";
+import {cn} from "@/lib/utils";
+import {Layers, MoveRight, Search, Zap} from "lucide-react";
 import type React from "react";
-import { Button } from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
+import Features from "@/components/ui/features";
 
 // The main props for the HowItWorks component
-interface HowItWorksProps extends React.HTMLAttributes<HTMLElement> {}
+interface HowItWorksProps extends React.HTMLAttributes<HTMLElement> {
+}
 
 // The props for a single step card
 interface StepCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  benefits: string[];
+    icon: React.ReactNode;
+    title: string;
+    description: string;
+    benefits: string[];
 }
 
 /**
@@ -21,36 +23,36 @@ interface StepCardProps {
  * It displays an icon, title, description, and a list of benefits.
  */
 const StepCard: React.FC<StepCardProps> = ({
-  icon,
-  title,
-  description,
-  benefits,
-}) => (
-  <div
-    className={cn(
-      "relative rounded-2xl border bg-white p-6 text-card-foreground transition-all duration-300 ease-in-out",
-      "hover:scale-105 hover:shadow-lg hover:border-primary/50 hover:bg-slate-50"
-    )}
-  >
-    {/* Icon */}
-    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-muted text-primary">
-      {icon}
+                                               icon,
+                                               title,
+                                               description,
+                                               benefits,
+                                           }) => (
+    <div
+        className={cn(
+            "relative rounded-2xl border bg-white p-6 text-card-foreground transition-all duration-300 ease-in-out",
+            "hover:scale-105 hover:shadow-lg hover:border-primary/50 hover:bg-slate-50"
+        )}
+    >
+        {/* Icon */}
+        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-muted text-primary">
+            {icon}
+        </div>
+        {/* Title and Description */}
+        <h3 className="mb-2 text-xl font-semibold">{title}</h3>
+        <p className="mb-6 text-muted-foreground">{description}</p>
+        {/* Benefits List */}
+        <ul className="space-y-3">
+            {benefits.map((benefit, index) => (
+                <li key={index} className="flex items-center gap-3">
+                    <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
+                        <div className="h-2 w-2 rounded-full bg-primary"></div>
+                    </div>
+                    <span className="text-muted-foreground">{benefit}</span>
+                </li>
+            ))}
+        </ul>
     </div>
-    {/* Title and Description */}
-    <h3 className="mb-2 text-xl font-semibold">{title}</h3>
-    <p className="mb-6 text-muted-foreground">{description}</p>
-    {/* Benefits List */}
-    <ul className="space-y-3">
-      {benefits.map((benefit, index) => (
-        <li key={index} className="flex items-center gap-3">
-          <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
-            <div className="h-2 w-2 rounded-full bg-primary"></div>
-          </div>
-          <span className="text-muted-foreground">{benefit}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
 );
 
 /**
@@ -58,103 +60,106 @@ const StepCard: React.FC<StepCardProps> = ({
  * It is styled with shadcn/ui theme variables to support light and dark modes.
  */
 export const HowItWorks: React.FC<HowItWorksProps> = ({
-  className,
-  ...props
-}) => {
-  const stepsData = [
-    {
-      icon: <Search className="h-6 w-6" />,
-      title: "Enter your query",
-      description:
-        "Enter part name or article number, and we'll instantly check availability across thousands of stores.",
-      benefits: [
-        "Smart search understands even imprecise queries",
-        "Automatic city detection",
-        "Search history for quick access",
-      ],
-    },
-    {
-      icon: <Layers className="h-6 w-6" />,
-      title: "Choose the best offer",
-      description:
-        "Compare prices, location and availability, choose the optimal option.",
-      benefits: [
-        "Sort by price, distance and rating",
-        "Filter by availability and manufacturer",
-        "Detailed information about each offer",
-      ],
-    },
-    {
-      icon: <Zap className="h-6 w-6" />,
-      title: "Contact the store",
-      description:
-        "Call the store directly or request a callback through our service.",
-      benefits: [
-        "Direct contact without intermediaries",
-        "Parts reservation capability",
-        "Route building to store",
-      ],
-    },
-  ];
+                                                          className,
+                                                          ...props
+                                                      }) => {
+    const stepsData = [
+        {
+            icon: <Search className="h-6 w-6"/>,
+            title: "Authorize Figma in Your IDE",
+            description:
+                "Sign in to Figma directly from your IDE. Select the design you’re working with.",
+            benefits: [
+                "Always in sync",
+                "Direct access to real design data",
+                "Secure by design",
+            ],
+        },
+        {
+            icon: <Layers className="h-6 w-6"/>,
+            title: "Select the Design You Want to Implement",
+            description:
+                "Choose the screen, component, or design file you’re ready to turn into code.",
+            benefits: [
+                "Guaranteed alignment with project requirements",
+                "Confidence in component reuse",
+                "Built-in style guide compliance",
+                "Build consistent UI at scale",
+            ],
+        },
+        {
+            icon: <Zap className="h-6 w-6"/>,
+            title: "Generate and Apply Project-Aware UI Code",
+            description:
+                "Generate code that reuses existing components and follows your conventions.",
+            benefits: [
+                "Faster UI delivery",
+                "Consistent codebase",
+                "No extra tools, no context switching, no generic output",
+            ],
+        },
+    ];
 
-  return (
-    <section
-      id="how-it-works"
-      className={cn("w-full bg-white py-16 sm:py-24", className)}
-      {...props}
-    >
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="mx-auto mb-16 max-w-4xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            How it works
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Our service uses advanced technologies for instant auto parts search
-            across thousands of stores in your city
-          </p>
-        </div>
+    return (
+        <section
+            id="how-it-works"
+            className={cn("w-full bg-white py-16 sm:py-24", className)}
+            {...props}
+        >
+            <div className="container mx-auto px-4">
+                {/* Section Header */}
+                <div className="mx-auto mb-16 max-w-4xl text-center">
+                    <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+                        How it works
+                    </h2>
+                    <p className="mt-4 text-lg text-muted-foreground">
+                        By combining Figma design with deep project awareness inside JetBrains IDEs or VS Code,
+                        it generates UI code that respects your frameworks, components, and APIs from the start.
+                    </p>
+                </div>
 
-        {/* Step Indicators with Connecting Line */}
-        <div className="relative mx-auto mb-8 w-full max-w-4xl">
-          <div
-            aria-hidden="true"
-            className="absolute left-[16.6667%] top-1/2 h-0.5 w-[66.6667%] -translate-y-1/2 bg-border"
-          ></div>
-          {/* Use grid to align numbers with the card grid below */}
-          <div className="relative grid grid-cols-3">
-            {stepsData.map((_, index) => (
-              <div
-                key={index}
-                // Center the number within its grid column
-                className="flex h-8 w-8 items-center justify-center justify-self-center rounded-full bg-white font-semibold text-foreground ring-4 ring-white"
-              >
-                {index + 1}
-              </div>
-            ))}
-          </div>
-        </div>
+                <Features/>
 
-        {/* Steps Grid */}
-        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-3">
-          {stepsData.map((step, index) => (
-            <StepCard
-              key={index}
-              icon={step.icon}
-              title={step.title}
-              description={step.description}
-              benefits={step.benefits}
-            />
-          ))}
-        </div>
+                {/* Step Indicators with Connecting Line */}
+                <div className="relative mx-auto mb-8 w-full max-w-4xl">
+                    <div
+                        aria-hidden="true"
+                        className="absolute left-[16.6667%] top-1/2 h-0.5 w-[66.6667%] -translate-y-1/2 bg-border"
+                    ></div>
+                    {/* Use grid to align numbers with the card grid below */}
+                    <div className="relative grid grid-cols-3">
+                        {stepsData.map((_, index) => (
+                            <div
+                                key={index}
+                                // Center the number within its grid column
+                                className="flex h-8 w-8 items-center justify-center justify-self-center rounded-full bg-white font-semibold text-foreground ring-4 ring-white"
+                            >
+                                {index + 1}
+                            </div>
+                        ))}
+                    </div>
+                </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-16 flex justify-center">
-          <Button size="lg" className="gap-4">
-            Sign up for the Alpha <MoveRight className="w-4 h-4" />
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
+                {/* Steps Grid */}
+                <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-3">
+                    {stepsData.map((step, index) => (
+                        <StepCard
+                            key={index}
+                            icon={step.icon}
+                            title={step.title}
+                            description={step.description}
+                            benefits={step.benefits}
+                        />
+                    ))}
+                </div>
+
+                {/* Bottom CTA */}
+                <div className="mt-16 flex justify-center">
+                    <Button size="lg" className="gap-4">
+                        Sign up for the Alpha <MoveRight className="w-4 h-4"/>
+                    </Button>
+                </div>
+            </div>
+        </section>
+    );
 };
