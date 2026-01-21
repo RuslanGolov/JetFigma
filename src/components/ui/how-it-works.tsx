@@ -155,9 +155,15 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
 
                     {/* Bottom CTA */}
                     <div className="mt-16 flex justify-center">
-                        <Button size="lg" className="gap-4">
-                            Sign up for the Alpha <MoveRight className="w-4 h-4"/>
-                        </Button>
+                        <a 
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSce8tE7wTU47WhYTP1X6mcWBUHjFo7-ANa8tpxh9JpwI3h8IQ/viewform?usp=publish-editor"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button size="lg" className="gap-4">
+                                Sign up for the Alpha <MoveRight className="w-4 h-4"/>
+                            </Button>
+                        </a>
                     </div>
                 </div>
             </div>
