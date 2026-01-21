@@ -25,16 +25,16 @@ export function SimpleHeader() {
 
 	return (
 		<header className="bg-background/95 supports-[backdrop-filter]:bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur-lg">
-			<nav className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-4 text-black">
+			<nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 text-black">
 				<div className="flex items-center gap-2">
 					<Image 
 						src="/logo.png" 
 						alt="DesignToCode Logo" 
-						width={32} 
-						height={32} 
-						className="size-8"
+						width={48} 
+						height={48} 
+						className="size-12"
 					/>
-					<p className="font-mono text-lg font-bold">DesignToCode</p>
+					<p className="font-mono text-2xl font-bold">DesignToCode</p>
 				</div>
 				<div className="hidden items-center gap-4 lg:flex">
 					{links.map((link) => (
