@@ -1,7 +1,7 @@
 "use client";
 
 import {cn} from "@/lib/utils";
-import {Layers, MoveRight, Search, Zap} from "lucide-react";
+import {Layers, Link, MoveRight, Zap} from "lucide-react";
 import type React from "react";
 import {Button} from "@/components/ui/button";
 import Features from "@/components/ui/features";
@@ -65,7 +65,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
                                                       }) => {
     const stepsData = [
         {
-            icon: <Search className="h-6 w-6"/>,
+            icon: <Link className="h-6 w-6"/>,
             title: "Authorize Figma in Your IDE",
             description:
                 "Sign in to Figma directly from your IDE. Select the design you’re working with.",

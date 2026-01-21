@@ -136,7 +136,7 @@ function Hero() {
         <div className="flex flex-col overflow-hidden pb-20">
           <ContainerScroll titleComponent={null}>
             <Image
-              src={`https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop`}
+              src={`https://www.jetbrains.com/idea/img/overview-heading-screenshot.png?q=80&w=2426&auto=format&fit=crop`}
               alt="hero"
               height={720}
               width={1400}

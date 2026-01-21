@@ -96,16 +96,16 @@ export const CyberneticBentoGrid = () => {
                         <p className="mt-2 text-gray-600 text-sm">Enterprise-grade authentication and user management built-in.</p>
                     </BentoItem>
                     <BentoItem className="row-span-2">
-                        <h2 className="text-xl font-bold text-black">Automated Backups</h2>
-                        <p className="mt-2 text-gray-600 text-sm">Your data is always safe with automated, redundant backups.</p>
+                        <h2 className="text-xl font-bold text-black">Build consistent UI at scale</h2>
+                        <p className="mt-2 text-gray-600 text-sm">Every implemented design follows the same rules, keeping the UI consistent across the entire project.</p>
                     </BentoItem>
                     <BentoItem className="col-span-1 md:col-span-2">
-                        <h2 className="text-xl font-bold text-black">Serverless Functions</h2>
-                        <p className="mt-2 text-gray-600 text-sm">Run your backend code without managing servers. Scale infinitely with ease.</p>
+                        <h2 className="text-xl font-bold text-black">Verify existing UI components</h2>
+                        <p className="mt-2 text-gray-600 text-sm">Detect whether required components already exist in the codebase and reuse them instead of creating new ones.</p>
                     </BentoItem>
                     <BentoItem>
-                        <h2 className="text-xl font-bold text-black">CLI Tool</h2>
-                        <p className="mt-2 text-gray-600 text-sm">Manage your entire infrastructure from the command line.</p>
+                        <h2 className="text-xl font-bold text-black">Enforce project style guides</h2>
+                        <p className="mt-2 text-gray-600 text-sm">Ensure colors, typography, spacing, and theming follow your project’s design system and style guidelines.</p>
                     </BentoItem>
                 </div>
             </div>
