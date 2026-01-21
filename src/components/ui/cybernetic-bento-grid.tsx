@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { InfiniteSlider } from "./infinite-slider";
 
 // Reusable BentoItem component
 const BentoItem = ({ className, children }: { className?: string, children: React.ReactNode }) => {
@@ -46,7 +47,7 @@ export const CyberneticBentoGrid = () => {
                             <p className="mt-2 text-gray-600">Supports all major UI frameworks and generates code that follows their native patterns and best practices.</p>
                         </div>
                         <div className="mt-4 h-auto min-h-[8rem] bg-neutral-100 rounded-lg flex items-center justify-center border border-black/5 overflow-hidden p-4">
-                            <div className="grid grid-cols-5 md:grid-cols-9 gap-4 items-start w-full justify-items-center">
+                            <InfiniteSlider gap={32} duration={20} durationOnHover={40}>
                                 <div className="flex flex-col items-center gap-2">
                                     <Image 
                                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" 
@@ -137,7 +138,7 @@ export const CyberneticBentoGrid = () => {
                                     />
                                     <span className="text-[10px] font-medium text-gray-500 text-center">Svelte</span>
                                 </div>
-                            </div>
+                            </InfiniteSlider>
                         </div>
                     </BentoItem>
                     <BentoItem>
