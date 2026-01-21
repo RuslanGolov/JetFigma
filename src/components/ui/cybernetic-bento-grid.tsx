@@ -45,35 +45,70 @@ export const CyberneticBentoGrid = () => {
                             <h2 className="text-2xl font-bold text-black">Native to Your JetBrains IDE</h2>
                             <p className="mt-2 text-gray-600">Seamlessly integrated with IntelliJ IDEA, WebStorm, PyCharm, Android Studio, and the JetBrains ecosystem—no extra tools, no context switching.</p>
                         </div>
-                        <div className="mt-4 h-48 bg-neutral-100 rounded-lg flex items-center justify-center border border-black/5 overflow-hidden">
-                            <div className="grid grid-cols-4 gap-4 md:gap-8 items-center">
+                        <div className="mt-4 h-auto min-h-[8rem] bg-neutral-100 rounded-lg flex items-center justify-center border border-black/5 overflow-hidden p-4">
+                            <div className="grid grid-cols-5 md:grid-cols-9 gap-4 items-center w-full justify-items-center">
                                 <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" 
-                                    alt="IntelliJ IDEA" 
-                                    width={80} 
-                                    height={80} 
-                                    className="w-16 h-16 md:w-20 md:h-20"
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" 
+                                    alt="React" 
+                                    width={40} 
+                                    height={40} 
+                                    className="w-10 h-10"
                                 />
                                 <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webstorm/webstorm-original.svg" 
-                                    alt="WebStorm" 
-                                    width={80} 
-                                    height={80} 
-                                    className="w-16 h-16 md:w-20 md:h-20"
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" 
+                                    alt="Vue.js" 
+                                    width={40} 
+                                    height={40} 
+                                    className="w-10 h-10"
                                 />
                                 <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" 
-                                    alt="PyCharm" 
-                                    width={80} 
-                                    height={80} 
-                                    className="w-16 h-16 md:w-20 md:h-20"
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" 
+                                    alt="Angular" 
+                                    width={40} 
+                                    height={40} 
+                                    className="w-10 h-10"
                                 />
                                 <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" 
-                                    alt="Android Studio" 
-                                    width={80} 
-                                    height={80} 
-                                    className="w-16 h-16 md:w-20 md:h-20"
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" 
+                                    alt="Flutter" 
+                                    width={40} 
+                                    height={40} 
+                                    className="w-10 h-10"
+                                />
+                                <Image 
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" 
+                                    alt="SwiftUI" 
+                                    width={40} 
+                                    height={40} 
+                                    className="w-10 h-10"
+                                />
+                                <Image 
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" 
+                                    alt="Electron" 
+                                    width={40} 
+                                    height={40} 
+                                    className="w-10 h-10"
+                                />
+                                <Image 
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-original.svg" 
+                                    alt="Tauri" 
+                                    width={40} 
+                                    height={40} 
+                                    className="w-10 h-10"
+                                />
+                                <Image 
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/qt/qt-original.svg" 
+                                    alt="Qt" 
+                                    width={40} 
+                                    height={40} 
+                                    className="w-10 h-10"
+                                />
+                                <Image 
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg" 
+                                    alt="Svelte / SvelteKit" 
+                                    width={40} 
+                                    height={40} 
+                                    className="w-10 h-10"
                                 />
                             </div>
                         </div>

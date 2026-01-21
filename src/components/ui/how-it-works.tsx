@@ -4,7 +4,6 @@ import {cn} from "@/lib/utils";
 import {Layers, Link, MoveRight, Zap} from "lucide-react";
 import type React from "react";
 import {Button} from "@/components/ui/button";
-import Features from "@/components/ui/features";
 
 // The main props for the HowItWorks component
 interface HowItWorksProps extends React.HTMLAttributes<HTMLElement> {
@@ -31,7 +30,7 @@ const StepCard: React.FC<StepCardProps> = ({
     <div
         className={cn(
             "relative rounded-2xl border bg-white p-6 text-card-foreground transition-all duration-300 ease-in-out",
-            "hover:scale-105 hover:shadow-lg hover:border-primary/50 hover:bg-slate-50"
+            "hover:scale-105 hover:shadow-lg hover:border-primary/50 hover:bg-white"
         )}
     >
         {/* Icon */}
@@ -108,7 +107,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
         >
             <div className="container mx-auto px-4">
                 {/* Section Header */}
-                <div className="mx-auto mb-16 max-w-4xl text-center">
+                <div className="mx-auto mb-8 max-w-4xl text-center">
                     <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
                         How it works
                     </h2>
@@ -117,11 +116,9 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
                         it generates UI code that respects your frameworks, components, and APIs from the start.
                     </p>
                 </div>
-
-                <Features/>
             </div>
 
-            <div className="bg-slate-50 py-16 sm:py-24">
+            <div className="bg-white pb-16 sm:pb-24">
                 <div className="container mx-auto px-4">
                     {/* Step Indicators with Connecting Line */}
                     <div className="relative mx-auto mb-8 w-full max-w-4xl">
@@ -135,7 +132,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
                                 <div
                                     key={index}
                                     // Center the number within its grid column
-                                    className="flex h-8 w-8 items-center justify-center justify-self-center rounded-full bg-white font-semibold text-foreground ring-4 ring-slate-50"
+                                    className="flex h-8 w-8 items-center justify-center justify-self-center rounded-full bg-white font-semibold text-foreground ring-4 ring-white"
                                 >
                                     {index + 1}
                                 </div>
