@@ -136,7 +136,7 @@ function Hero() {
         <div className="flex flex-col overflow-hidden pb-20">
           <ContainerScroll titleComponent={null}>
             <Image
-              src="/images/hero-screenshot.png"
+              src="/images/figma-to-code.png"
               alt="hero"
               height={720}
               width={1400}
