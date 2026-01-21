@@ -42,8 +42,8 @@ export const CyberneticBentoGrid = () => {
                 <div className="bento-grid">
                     <BentoItem className="col-span-1 md:col-span-2 row-span-2 flex flex-col justify-between">
                         <div>
-                            <h2 className="text-2xl font-bold text-black">Native to Your JetBrains IDE</h2>
-                            <p className="mt-2 text-gray-600">Seamlessly integrated with IntelliJ IDEA, WebStorm, PyCharm, Android Studio, and the JetBrains ecosystem—no extra tools, no context switching.</p>
+                            <h2 className="text-2xl font-bold text-black">Supports All Major UI Frameworks </h2>
+                            <p className="mt-2 text-gray-600">Supports all major UI frameworks and generates code that follows their native patterns and best practices.</p>
                         </div>
                         <div className="mt-4 h-auto min-h-[8rem] bg-neutral-100 rounded-lg flex items-center justify-center border border-black/5 overflow-hidden p-4">
                             <div className="grid grid-cols-5 md:grid-cols-9 gap-4 items-center w-full justify-items-center">
@@ -127,8 +127,17 @@ export const CyberneticBentoGrid = () => {
                         <p className="mt-2 text-gray-600 text-sm">Project-aware UI generation, now available inside Visual Studio Code.</p>
                     </BentoItem>
                     <BentoItem>
-                        <h2 className="text-xl font-bold text-black">Secure Auth</h2>
-                        <p className="mt-2 text-gray-600 text-sm">Enterprise-grade authentication and user management built-in.</p>
+                        <div className="flex items-center gap-2">
+                            <Image 
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetbrains/jetbrains-original.svg"
+                                alt="JetBrains"
+                                width={24}
+                                height={24}
+                                className="w-6 h-6"
+                            />
+                            <h2 className="text-xl font-bold text-black">Native to Your JetBrains IDE</h2>
+                        </div>
+                        <p className="mt-2 text-gray-600 text-sm">Seamlessly integrated with IntelliJ IDEA, WebStorm, PyCharm, Android Studio, and the JetBrains ecosystem</p>
                     </BentoItem>
                     <BentoItem className="row-span-2">
                         <h2 className="text-xl font-bold text-black">Build consistent UI at scale</h2>
@@ -141,6 +150,10 @@ export const CyberneticBentoGrid = () => {
                     <BentoItem>
                         <h2 className="text-xl font-bold text-black">Enforce project style guides</h2>
                         <p className="mt-2 text-gray-600 text-sm">Ensure colors, typography, spacing, and theming follow your project’s design system and style guidelines.</p>
+                    </BentoItem>
+                    <BentoItem>
+                        <h2 className="text-xl font-bold text-black">Secure Auth</h2>
+                        <p className="mt-2 text-gray-600 text-sm">Enterprise-grade authentication and user management built-in.</p>
                     </BentoItem>
                 </div>
             </div>
