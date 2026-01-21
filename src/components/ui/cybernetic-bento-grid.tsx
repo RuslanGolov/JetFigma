@@ -46,70 +46,97 @@ export const CyberneticBentoGrid = () => {
                             <p className="mt-2 text-gray-600">Supports all major UI frameworks and generates code that follows their native patterns and best practices.</p>
                         </div>
                         <div className="mt-4 h-auto min-h-[8rem] bg-neutral-100 rounded-lg flex items-center justify-center border border-black/5 overflow-hidden p-4">
-                            <div className="grid grid-cols-5 md:grid-cols-9 gap-4 items-center w-full justify-items-center">
-                                <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" 
-                                    alt="React" 
-                                    width={40} 
-                                    height={40} 
-                                    className="w-10 h-10"
-                                />
-                                <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" 
-                                    alt="Vue.js" 
-                                    width={40} 
-                                    height={40} 
-                                    className="w-10 h-10"
-                                />
-                                <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" 
-                                    alt="Angular" 
-                                    width={40} 
-                                    height={40} 
-                                    className="w-10 h-10"
-                                />
-                                <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" 
-                                    alt="Flutter" 
-                                    width={40} 
-                                    height={40} 
-                                    className="w-10 h-10"
-                                />
-                                <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" 
-                                    alt="SwiftUI" 
-                                    width={40} 
-                                    height={40} 
-                                    className="w-10 h-10"
-                                />
-                                <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" 
-                                    alt="Electron" 
-                                    width={40} 
-                                    height={40} 
-                                    className="w-10 h-10"
-                                />
-                                <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-original.svg" 
-                                    alt="Tauri" 
-                                    width={40} 
-                                    height={40} 
-                                    className="w-10 h-10"
-                                />
-                                <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/qt/qt-original.svg" 
-                                    alt="Qt" 
-                                    width={40} 
-                                    height={40} 
-                                    className="w-10 h-10"
-                                />
-                                <Image 
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg" 
-                                    alt="Svelte / SvelteKit" 
-                                    width={40} 
-                                    height={40} 
-                                    className="w-10 h-10"
-                                />
+                            <div className="grid grid-cols-5 md:grid-cols-9 gap-4 items-start w-full justify-items-center">
+                                <div className="flex flex-col items-center gap-2">
+                                    <Image 
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" 
+                                        alt="React" 
+                                        width={40} 
+                                        height={40} 
+                                        className="w-10 h-10"
+                                    />
+                                    <span className="text-[10px] font-medium text-gray-500">React</span>
+                                </div>
+                                <div className="flex flex-col items-center gap-2">
+                                    <Image 
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" 
+                                        alt="Vue.js" 
+                                        width={40} 
+                                        height={40} 
+                                        className="w-10 h-10"
+                                    />
+                                    <span className="text-[10px] font-medium text-gray-500">Vue.js</span>
+                                </div>
+                                <div className="flex flex-col items-center gap-2">
+                                    <Image 
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" 
+                                        alt="Angular" 
+                                        width={40} 
+                                        height={40} 
+                                        className="w-10 h-10"
+                                    />
+                                    <span className="text-[10px] font-medium text-gray-500">Angular</span>
+                                </div>
+                                <div className="flex flex-col items-center gap-2">
+                                    <Image 
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" 
+                                        alt="Flutter" 
+                                        width={40} 
+                                        height={40} 
+                                        className="w-10 h-10"
+                                    />
+                                    <span className="text-[10px] font-medium text-gray-500">Flutter</span>
+                                </div>
+                                <div className="flex flex-col items-center gap-2">
+                                    <Image 
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" 
+                                        alt="SwiftUI" 
+                                        width={40} 
+                                        height={40} 
+                                        className="w-10 h-10"
+                                    />
+                                    <span className="text-[10px] font-medium text-gray-500">SwiftUI</span>
+                                </div>
+                                <div className="flex flex-col items-center gap-2">
+                                    <Image 
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" 
+                                        alt="Electron" 
+                                        width={40} 
+                                        height={40} 
+                                        className="w-10 h-10"
+                                    />
+                                    <span className="text-[10px] font-medium text-gray-500">Electron</span>
+                                </div>
+                                <div className="flex flex-col items-center gap-2">
+                                    <Image 
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-original.svg" 
+                                        alt="Tauri" 
+                                        width={40} 
+                                        height={40} 
+                                        className="w-10 h-10"
+                                    />
+                                    <span className="text-[10px] font-medium text-gray-500">Tauri</span>
+                                </div>
+                                <div className="flex flex-col items-center gap-2">
+                                    <Image 
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/qt/qt-original.svg" 
+                                        alt="Qt" 
+                                        width={40} 
+                                        height={40} 
+                                        className="w-10 h-10"
+                                    />
+                                    <span className="text-[10px] font-medium text-gray-500">Qt</span>
+                                </div>
+                                <div className="flex flex-col items-center gap-2">
+                                    <Image 
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg" 
+                                        alt="Svelte / SvelteKit" 
+                                        width={40} 
+                                        height={40} 
+                                        className="w-10 h-10"
+                                    />
+                                    <span className="text-[10px] font-medium text-gray-500 text-center">Svelte</span>
+                                </div>
                             </div>
                         </div>
                     </BentoItem>
