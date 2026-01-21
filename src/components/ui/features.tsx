@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/card'
 export default function Features() {
   return (
     <section>
-      <div className="bg-muted/50 py-24">
+      <div className="pb-24">
         <div className="mx-auto w-full max-w-5xl px-6">
           <div className="border-foreground/10 relative grid gap-12 border-b pb-12 [--radius:1rem] md:grid-cols-2">
             <div>

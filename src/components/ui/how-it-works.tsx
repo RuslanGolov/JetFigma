@@ -103,7 +103,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
     return (
         <section
             id="how-it-works"
-            className={cn("w-full bg-white py-16 sm:py-24", className)}
+            className={cn("w-full bg-white pt-16 sm:pt-24", className)}
             {...props}
         >
             <div className="container mx-auto px-4">
@@ -119,45 +119,49 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
                 </div>
 
                 <Features/>
+            </div>
 
-                {/* Step Indicators with Connecting Line */}
-                <div className="relative mx-auto mb-8 w-full max-w-4xl">
-                    <div
-                        aria-hidden="true"
-                        className="absolute left-[16.6667%] top-1/2 h-0.5 w-[66.6667%] -translate-y-1/2 bg-border"
-                    ></div>
-                    {/* Use grid to align numbers with the card grid below */}
-                    <div className="relative grid grid-cols-3">
-                        {stepsData.map((_, index) => (
-                            <div
+            <div className="bg-slate-50 py-16 sm:py-24">
+                <div className="container mx-auto px-4">
+                    {/* Step Indicators with Connecting Line */}
+                    <div className="relative mx-auto mb-8 w-full max-w-4xl">
+                        <div
+                            aria-hidden="true"
+                            className="absolute left-[16.6667%] top-1/2 h-0.5 w-[66.6667%] -translate-y-1/2 bg-border"
+                        ></div>
+                        {/* Use grid to align numbers with the card grid below */}
+                        <div className="relative grid grid-cols-3">
+                            {stepsData.map((_, index) => (
+                                <div
+                                    key={index}
+                                    // Center the number within its grid column
+                                    className="flex h-8 w-8 items-center justify-center justify-self-center rounded-full bg-white font-semibold text-foreground ring-4 ring-slate-50"
+                                >
+                                    {index + 1}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Steps Grid */}
+                    <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-3">
+                        {stepsData.map((step, index) => (
+                            <StepCard
                                 key={index}
-                                // Center the number within its grid column
-                                className="flex h-8 w-8 items-center justify-center justify-self-center rounded-full bg-white font-semibold text-foreground ring-4 ring-white"
-                            >
-                                {index + 1}
-                            </div>
+                                icon={step.icon}
+                                title={step.title}
+                                description={step.description}
+                                benefits={step.benefits}
+                            />
                         ))}
                     </div>
-                </div>
 
-                {/* Steps Grid */}
-                <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-3">
-                    {stepsData.map((step, index) => (
-                        <StepCard
-                            key={index}
-                            icon={step.icon}
-                            title={step.title}
-                            description={step.description}
-                            benefits={step.benefits}
-                        />
-                    ))}
-                </div>
-
-                {/* Bottom CTA */}
-                <div className="mt-16 flex justify-center">
-                    <Button size="lg" className="gap-4">
-                        Sign up for the Alpha <MoveRight className="w-4 h-4"/>
-                    </Button>
+                    {/* Bottom CTA */}
+                    <div className="mt-16 flex justify-center">
+                        <Button size="lg" className="gap-4">
+                            Sign up for the Alpha <MoveRight className="w-4 h-4"/>
+                        </Button>
+                    </div>
                 </div>
             </div>
         </section>
