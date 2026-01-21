@@ -2,6 +2,9 @@ import { HeroDemo } from "@/components/ui/demo";
 import { CyberneticBentoDemo } from "@/components/ui/cybernetic-bento-demo";
 import HowItWorksDemo from "@/components/ui/how-it-works-demo";
 import { SimpleHeader } from "@/components/ui/simple-header";
+import { Footer } from "@/components/ui/footer";
+import Image from "next/image";
+import { Github, Twitter } from "lucide-react";
 
 export default function Home() {
   return (
@@ -10,6 +13,42 @@ export default function Home() {
       <HeroDemo />
       <CyberneticBentoDemo />
       <HowItWorksDemo />
+      <Footer 
+        logo={
+          <Image 
+            src="/logo.png" 
+            alt="DesignToCode Logo" 
+            width={32} 
+            height={32} 
+            className="size-8"
+          />
+        }
+        brandName="DesignToCode"
+        socialLinks={[
+          {
+            icon: <Twitter className="h-5 w-5" />,
+            href: "https://twitter.com",
+            label: "Twitter",
+          },
+          {
+            icon: <Github className="h-5 w-5" />,
+            href: "https://github.com",
+            label: "GitHub",
+          },
+        ]}
+        mainLinks={[
+          { href: "#key-features", label: "Features" },
+          { href: "#how-it-works", label: "How it works" },
+        ]}
+        legalLinks={[
+          { href: "#", label: "Privacy Policy" },
+          { href: "#", label: "Terms of Service" },
+        ]}
+        copyright={{
+          text: `© ${new Date().getFullYear()} DesignToCode`,
+          license: "All rights reserved",
+        }}
+      />
     </main>
   );
 }

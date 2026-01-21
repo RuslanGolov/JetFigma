@@ -6,6 +6,7 @@ import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import Image from "next/image";
+import { SignUpModal } from "./sign-up-modal";
 
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -128,15 +129,11 @@ function Hero() {
             </p>
           </div>
           <div className="flex flex-row gap-3">
-            <a 
-              href="https://docs.google.com/forms/d/e/1FAIpQLSce8tE7wTU47WhYTP1X6mcWBUHjFo7-ANa8tpxh9JpwI3h8IQ/viewform?usp=publish-editor"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <SignUpModal>
               <Button size="lg" className="gap-4">
                 Sign up for the Alpha <MoveRight className="w-4 h-4" />
               </Button>
-            </a>
+            </SignUpModal>
           </div>
         </div>
         <div className="flex flex-col overflow-hidden pb-20">

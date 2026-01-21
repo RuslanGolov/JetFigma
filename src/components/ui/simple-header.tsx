@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Sheet, SheetContent, SheetFooter } from '@/components/ui/sheet';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { MenuToggle } from '@/components/ui/menu-toggle';
+import { SignUpModal } from '@/components/ui/sign-up-modal';
 
 export function SimpleHeader() {
 	const [open, setOpen] = React.useState(false);
@@ -20,8 +21,6 @@ export function SimpleHeader() {
 			href: '#how-it-works',
 		},
 	];
-
-    const ALPHA_URL = "https://docs.google.com/forms/d/e/1FAIpQLSce8tE7wTU47WhYTP1X6mcWBUHjFo7-ANa8tpxh9JpwI3h8IQ/viewform?usp=publish-editor";
 
 	return (
 		<header className="bg-background/95 supports-[backdrop-filter]:bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur-lg">
@@ -46,15 +45,11 @@ export function SimpleHeader() {
 							{link.label}
 						</a>
 					))}
-                    <a 
-                        href={ALPHA_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Button className="gap-2">
-                            Sign up for the Alpha <MoveRight className="w-4 h-4" />
-                        </Button>
-                    </a>
+					<SignUpModal>
+						<Button className="gap-2">
+							Sign up for the Alpha <MoveRight className="w-4 h-4" />
+						</Button>
+					</SignUpModal>
 				</div>
 				<Sheet open={open} onOpenChange={setOpen}>
 					<Button size="icon" variant="outline" className="lg:hidden" asChild>
@@ -86,16 +81,11 @@ export function SimpleHeader() {
 							))}
 						</div>
 						<SheetFooter className="px-4">
-                            <a 
-                                href={ALPHA_URL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full"
-                            >
-                                <Button className="w-full gap-2">
-                                    Sign up for the Alpha <MoveRight className="w-4 h-4" />
-                                </Button>
-                            </a>
+							<SignUpModal>
+								<Button className="w-full gap-2">
+									Sign up for the Alpha <MoveRight className="w-4 h-4" />
+								</Button>
+							</SignUpModal>
 						</SheetFooter>
 					</SheetContent>
 				</Sheet>
