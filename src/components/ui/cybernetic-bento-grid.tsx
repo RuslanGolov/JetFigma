@@ -43,8 +43,8 @@ export const CyberneticBentoGrid = () => {
                 <div className="bento-grid">
                     <BentoItem className="col-span-1 md:col-span-2 row-span-2 flex flex-col justify-between">
                         <div>
-                            <h2 className="text-2xl font-bold text-black">Supports All Major UI Frameworks </h2>
-                            <p className="mt-2 text-gray-600">Supports all major UI frameworks and generates code that follows their native patterns and best practices.</p>
+                            <h2 className="text-2xl font-bold text-black">Supported All Major UI Frameworks </h2>
+                            <p className="mt-2 text-gray-600">Generate code that follows their native patterns and best practices.</p>
                         </div>
                         <div className="mt-4 h-auto min-h-[8rem] bg-neutral-100 rounded-lg flex items-center justify-center border border-black/5 overflow-hidden p-4">
                             <InfiniteSlider gap={32} duration={20} durationOnHover={40}>
@@ -175,13 +175,9 @@ export const CyberneticBentoGrid = () => {
                         <h2 className="text-xl font-bold text-black">Verify existing UI components</h2>
                         <p className="mt-2 text-gray-600 text-sm">Detect whether required components already exist in the codebase and reuse them instead of creating new ones.</p>
                     </BentoItem>
-                    <BentoItem>
+                    <BentoItem className="col-span-1 md:col-span-2">
                         <h2 className="text-xl font-bold text-black">Enforce project style guides</h2>
                         <p className="mt-2 text-gray-600 text-sm">Ensure colors, typography, spacing, and theming follow your project’s design system and style guidelines.</p>
-                    </BentoItem>
-                    <BentoItem>
-                        <h2 className="text-xl font-bold text-black">Secure Auth</h2>
-                        <p className="mt-2 text-gray-600 text-sm">Enterprise-grade authentication and user management built-in.</p>
                     </BentoItem>
                 </div>
             </div>
