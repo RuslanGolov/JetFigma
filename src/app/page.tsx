@@ -27,12 +27,12 @@ export default function Home() {
         socialLinks={[
           {
             icon: <Twitter className="h-5 w-5" />,
-            href: "https://twitter.com",
+            href: "https://x.com/figma",
             label: "Twitter",
           },
           {
             icon: <Github className="h-5 w-5" />,
-            href: "https://github.com",
+            href: "https://github.com/figma",
             label: "GitHub",
           },
         ]}
@@ -40,10 +40,7 @@ export default function Home() {
           { href: "#key-features", label: "Features" },
           { href: "#how-it-works", label: "How it works" },
         ]}
-        legalLinks={[
-          { href: "#", label: "Privacy Policy" },
-          { href: "#", label: "Terms of Service" },
-        ]}
+        legalLinks={[]}
         copyright={{
           text: `© ${new Date().getFullYear()} DesignToCode`,
           license: "All rights reserved",

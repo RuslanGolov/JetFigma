@@ -29,25 +29,14 @@ export function SignUpModal({ children }: SignUpModalProps) {
         setLoading(true);
 
         try {
-            // Google Form URL from previous issues
-            const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSce8tE7wTU47WhYTP1X6mcWBUHjFo7-ANa8tpxh9JpwI3h8IQ/formResponse";
-            
-            // We need to find the entry ID for the email field. 
-            // Usually it's something like entry.123456789.
-            // Since I don't know the exact entry ID and I cannot easily inspect the live form,
-            // I will use a common pattern or a placeholder.
-            // HOWEVER, the user specifically asked to store it in a google sheet.
-            // Submitting to a Google Form Response URL is the easiest way without a backend.
-            
+            // URL provided by user: https://docs.google.com/forms/d/1w0BXq81wtjy3_xf1xTf4m0JCiQpRMaexliLOuTkEjFs/edit
+            // Converted to the /formResponse endpoint for submission
+            const FORM_SUBMIT_URL = "https://docs.google.com/forms/d/1w0BXq81wtjy3_xf1xTf4m0JCiQpRMaexliLOuTkEjFs/formResponse";
+
             const formData = new FormData();
-            // This is a guess for the email field ID. 
-            // In a real scenario, I'd ask the user or inspect the form.
-            // I'll try to find it in the original URL or use a generic approach.
-            formData.append('entry.1884223637', email); // This is a common one, but likely wrong for this specific form.
+            formData.append('entry.587176871', email);
             
-            // Since I can't be sure of the entry ID, and I want to satisfy the "store in google sheet" requirement
-            // I will use a no-cors fetch which is common for Google Forms.
-            await fetch(FORM_URL, {
+            await fetch(FORM_SUBMIT_URL, {
                 method: 'POST',
                 mode: 'no-cors',
                 body: formData
