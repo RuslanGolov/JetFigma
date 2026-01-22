@@ -7,13 +7,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://designtocode.io'),
-  title: "DesignToCode — the fastest way from design to production code",
-  description: "Convert your Figma design to React, Vue, Angular, and more with DesignToCode. Generate project-aware UI code that follows your framework's native patterns and best practices.",
+  title: "Design to Code – Generate UI that respects your frameworks",
+  description: "By combining Figma design with deep project awareness inside JetBrains IDEs or VS Code, it generates UI code that respects your frameworks, components, and APIs from the start.",
   keywords: ["Figma to code", "Design to React", "Figma to Vue", "UI code generation", "JetBrains plugin", "VS Code extension", "Design system automation"],
   authors: [{ name: "DesignToCode Team" }],
   openGraph: {
-    title: "DesignToCode — the fastest way from design to production code",
-    description: "Convert your Figma design to production-ready code in seconds. Supports React, Vue, Angular, Flutter, and more.",
+    title: "Design to Code – Generate UI that respects your frameworks",
+    description: "By combining Figma design with deep project awareness inside JetBrains IDEs or VS Code, it generates UI code that respects your frameworks, components, and APIs from the start.",
     url: "https://designtocode.io", // Assuming the domain
     siteName: "DesignToCode",
     images: [
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DesignToCode — the fastest way from design to production code",
-    description: "Convert your Figma design to production-ready code in seconds.",
+    title: "Design to Code – Generate UI that respects your frameworks",
+    description: "By combining Figma design with deep project awareness inside JetBrains IDEs or VS Code, it generates UI code that respects your frameworks, components, and APIs from the start.",
     images: ["/images/figma-to-code.png"],
     creator: "@designtocode",
   },
