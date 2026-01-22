@@ -130,7 +130,7 @@ function Hero() {
           <ContainerScroll titleComponent={null}>
             <Image
               src="/images/figma-to-code.png"
-              alt="hero"
+              alt="DesignToCode Interface - Converting Figma design to production code"
               height={720}
               width={1400}
               className="mx-auto rounded-2xl object-cover h-full object-center"

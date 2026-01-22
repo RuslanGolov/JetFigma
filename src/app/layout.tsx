@@ -6,8 +6,38 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://designtocode.io'),
   title: "DesignToCode — the fastest way from design to production code",
-  description: "Next.js migration of the Animated Hero component",
+  description: "Convert your Figma design to React, Vue, Angular, and more with DesignToCode. Generate project-aware UI code that follows your framework's native patterns and best practices.",
+  keywords: ["Figma to code", "Design to React", "Figma to Vue", "UI code generation", "JetBrains plugin", "VS Code extension", "Design system automation"],
+  authors: [{ name: "DesignToCode Team" }],
+  openGraph: {
+    title: "DesignToCode — the fastest way from design to production code",
+    description: "Convert your Figma design to production-ready code in seconds. Supports React, Vue, Angular, Flutter, and more.",
+    url: "https://designtocode.io", // Assuming the domain
+    siteName: "DesignToCode",
+    images: [
+      {
+        url: "/images/figma-to-code.png",
+        width: 1200,
+        height: 630,
+        alt: "DesignToCode Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DesignToCode — the fastest way from design to production code",
+    description: "Convert your Figma design to production-ready code in seconds.",
+    images: ["/images/figma-to-code.png"],
+    creator: "@designtocode",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
