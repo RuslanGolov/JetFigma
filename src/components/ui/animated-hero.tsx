@@ -126,18 +126,18 @@ function Hero() {
             </SignUpModal>
           </div>
         </div>
-        <div className="flex flex-col overflow-hidden pb-20">
-          <ContainerScroll titleComponent={null}>
-            <Image
-              src="/images/figma-to-code.png"
-              alt="DesignToCode Interface - Converting Figma design to production code"
-              height={720}
-              width={1400}
-              className="mx-auto rounded-2xl object-cover h-full object-center"
-              draggable={false}
-            />
-          </ContainerScroll>
-        </div>
+      </div>
+      <div className="flex flex-col overflow-hidden pb-20">
+        <ContainerScroll titleComponent={null}>
+          <Image
+            src="/images/figma-to-code.png"
+            alt="DesignToCode Interface - Converting Figma design to production code"
+            height={720}
+            width={1400}
+            className="mx-auto object-cover h-full w-full object-center"
+            draggable={false}
+          />
+        </ContainerScroll>
       </div>
     </div>
   );

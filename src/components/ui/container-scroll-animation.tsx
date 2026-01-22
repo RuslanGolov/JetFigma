@@ -46,7 +46,7 @@ export const ContainerScroll = ({
           perspective: "1000px",
         }}
       >
-        <Header translate={translate} titleComponent={titleComponent} />
+        {titleComponent && <Header translate={translate} titleComponent={titleComponent} />}
         <Card rotate={rotate} translate={translate} scale={scale} innerScale={innerScale}>
           {children}
         </Card>
@@ -90,7 +90,7 @@ export const Card = ({
     >
       <motion.div 
         style={{ scale: innerScale }}
-        className=" h-full w-full overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-4 flex items-center justify-center md:block"
+        className="h-full w-full overflow-hidden rounded-2xl bg-zinc-900 flex items-center justify-center"
       >
         {children}
       </motion.div>
