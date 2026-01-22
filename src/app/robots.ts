@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://designtocode.io/sitemap.xml',
+    sitemap: 'https://designtocode.dev/sitemap.xml',
   }
 }

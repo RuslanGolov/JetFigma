@@ -6,7 +6,7 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://designtocode.io'),
+  metadataBase: new URL('https://designtocode.dev'),
   title: "Design to Code – Generate UI that respects your frameworks",
   description: "By combining Figma design with deep project awareness inside JetBrains IDEs or VS Code, it generates UI code that respects your frameworks, components, and APIs from the start.",
   keywords: ["Figma to code", "Design to React", "Figma to Vue", "UI code generation", "JetBrains plugin", "VS Code extension", "Design system automation"],
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Design to Code – Generate UI that respects your frameworks",
     description: "By combining Figma design with deep project awareness inside JetBrains IDEs or VS Code, it generates UI code that respects your frameworks, components, and APIs from the start.",
-    url: "https://designtocode.io", // Assuming the domain
+    url: "https://designtocode.dev", // Assuming the domain
     siteName: "DesignToCode",
     images: [
       {
