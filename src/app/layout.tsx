@@ -6,7 +6,7 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Animated Hero - Next.js",
+  title: "DesignToCode — the fastest way from design to production code",
   description: "Next.js migration of the Animated Hero component",
 };
 
